@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(PathPlanning)
+project(path_planning)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -21,9 +21,9 @@ include_directories(
 )
 
 
-add_executable(PathPlanning_Run src/PathPlanning.cpp)
-target_link_libraries(PathPlanning_Run ${GTEST_LIBRARIES} ${catkin_LIBRARIES} pthread)
-add_dependencies(PathPlanning_Run PathPlanning_pathplanning_cpp)
+add_executable(path_planning_Run src/path_planning.cc)
+target_link_libraries(path_planning_Run ${GTEST_LIBRARIES} ${catkin_LIBRARIES} pthread)
+add_dependencies(path_planning_Run path_planning_path_planning_cc)
 
-catkin_add_gtest(PathPlanning_utest src/test/utest.cpp)
-target_link_libraries(PathPlanning_utest ${catkin_LIBRARIES}) 
+catkin_add_gtest(path_planning_utest src/test/utest.cc)
+target_link_libraries(path_planning_utest ${catkin_LIBRARIES}) 

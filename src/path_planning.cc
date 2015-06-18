@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PathPlanning.h"
+#include "path_planning.h"
 
 int PathPlanning::test() {
     return 2;
